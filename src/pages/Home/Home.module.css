@@ -15,7 +15,11 @@
   min-height: 720px;
   padding: 168px 0 112px;
   background:
-    radial-gradient(circle at 10% 16%, rgba(244, 132, 95, 0.12), transparent 25%),
+    radial-gradient(
+      circle at 10% 16%,
+      rgba(244, 132, 95, 0.12),
+      transparent 25%
+    ),
     var(--cream);
 }
 
@@ -220,7 +224,11 @@
 .heroImageFrame::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(23, 59, 49, 0.02), rgba(23, 59, 49, 0.2));
+  background: linear-gradient(
+    180deg,
+    rgba(23, 59, 49, 0.02),
+    rgba(23, 59, 49, 0.2)
+  );
   content: "";
 }
 
@@ -1092,8 +1100,6 @@
   height: 44px;
   place-items: center;
   border-radius: 14px;
-  background: var(--secondary);
-  color: #fff;
 }
 
 .footerBrand h3 {
@@ -1147,7 +1153,9 @@
 .footerCol a {
   color: rgba(255, 255, 255, 0.58);
   font-size: 0.72rem;
-  transition: color 180ms var(--ease-out), transform 180ms var(--ease-out);
+  transition:
+    color 180ms var(--ease-out),
+    transform 180ms var(--ease-out);
 }
 
 .footerCol a:hover {

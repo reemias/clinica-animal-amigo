@@ -17,11 +17,9 @@ import {
   Pill,
   Quote,
   Scissors,
-  ShieldCheck,
   Star,
   Stethoscope,
   Syringe,
-  UsersRound,
 } from "lucide-react";
 import style from "./Home.module.css";
 import Formulario from "../../component/Formulario";
@@ -29,7 +27,8 @@ import heroPhoto from "../../img/funcoHero.png";
 import aboutPhoto from "../../img/Design sem nome - 2026-08-30T191922.274.png";
 import boutiquePhoto from "../../img/Design sem nome - 2026-08-30T190529.563.png";
 import receptionPhoto from "../../img/Design sem nome - 2026-08-30T185318.118.png";
-
+import BoutiqueCards from "../../component/BoutiqueCards";
+import Logo from "../../img/Design_sem_nome_-_2026-08-30T172737.744-removebg-preview.png";
 const services = [
   {
     icon: Stethoscope,
@@ -210,38 +209,6 @@ function Home() {
           </div>
         </section>
 
-        <section className={style.trustStrip} aria-label="Números da Animal Amigo">
-          <div className={`${style.container} ${style.trustGrid}`}>
-            <div className={style.trustItem}>
-              <span className={style.trustIcon}>
-                <ShieldCheck size={21} />
-              </span>
-              <div>
-                <strong>Cuidado seguro</strong>
-                <span>Equipe preparada para acolher</span>
-              </div>
-            </div>
-            <div className={style.trustItem}>
-              <span className={style.trustIcon}>
-                <UsersRound size={21} />
-              </span>
-              <div>
-                <strong>Atendimento humano</strong>
-                <span>Respeito em cada encontro</span>
-              </div>
-            </div>
-            <div className={style.trustItem}>
-              <span className={style.trustIcon}>
-                <Building2 size={21} />
-              </span>
-              <div>
-                <strong>Estrutura completa</strong>
-                <span>Tudo em um só lugar</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className={style.diferenciais} id="diferenciais">
           <div className={style.container}>
             <div className={style.sectionHeader}>
@@ -299,6 +266,20 @@ function Home() {
               </div>
               <Formulario />
             </div>
+          </div>
+        </section>
+
+        {/* Seção Boutique com os cards */}
+        <section className={style.boutique} id="boutique">
+          <div className={style.container}>
+            <div className={style.sectionHeader}>
+              <span className={style.tag}>Boutique</span>
+              <h2>Produtos em Destaque</h2>
+              <p className={style.lead}>
+                Confira nossos produtos mais queridos pelos pets e seus tutores.
+              </p>
+            </div>
+            <BoutiqueCards />
           </div>
         </section>
 
@@ -398,7 +379,9 @@ function Home() {
 
         <section className={style.estrutura} id="estrutura">
           <div className={style.container}>
-            <div className={style.sectionHeaderRow + " " + style.structureHeader}>
+            <div
+              className={style.sectionHeaderRow + " " + style.structureHeader}
+            >
               <div className={style.sectionHeaderCompact}>
                 <span className={style.kickerLight}>Infraestrutura</span>
                 <h2>Prontos para todas as fases do cuidado.</h2>
@@ -501,12 +484,16 @@ function Home() {
               </article>
               <article className={style.confidenceCard}>
                 <Quote size={25} />
-                <p>Profissionais especializados para acompanhar cada necessidade.</p>
+                <p>
+                  Profissionais especializados para acompanhar cada necessidade.
+                </p>
                 <strong>Equipe multidisciplinar</strong>
               </article>
               <article className={style.confidenceCard}>
                 <Quote size={25} />
-                <p>Mais do que tratamentos: presença, respeito e cuidado humano.</p>
+                <p>
+                  Mais do que tratamentos: presença, respeito e cuidado humano.
+                </p>
                 <strong>Nosso jeito de cuidar</strong>
               </article>
             </div>
@@ -600,7 +587,7 @@ function Home() {
           <div className={style.footerMain}>
             <div className={style.footerBrand}>
               <div className={style.footerBrandMark}>
-                <PawPrint size={19} />
+                <img src={Logo} />
               </div>
               <div>
                 <h3>Animal Amigo</h3>

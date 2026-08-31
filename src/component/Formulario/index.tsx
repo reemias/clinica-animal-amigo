@@ -57,7 +57,7 @@ const gerarHorarios = (): string[] => {
 
   periodos.forEach(({ inicio, fim }) => {
     for (let hora = inicio; hora < fim; hora++) {
-      for (let minuto of [0, 30]) {
+      for (const minuto of [0, 30]) {
         const horaStr = String(hora).padStart(2, "0");
         const minStr = String(minuto).padStart(2, "0");
         horarios.push(`${horaStr}:${minStr}`);
@@ -118,7 +118,7 @@ export default function ContactForm() {
           confirmButtonText: "Entendi",
         });
       }
-    } catch (error) {
+    } catch {
       await Swal.fire({
         icon: "error",
         title: "Erro de conexão",
@@ -237,7 +237,7 @@ export default function ContactForm() {
         </div>
 
         <button type="submit" className={styles.button} disabled={isSubmitting}>
-          {isSubmitting ? "Enviando..." : "Solicitar Agendamento 📅"}
+          {isSubmitting ? "Enviando..." : "Solicitar agendamento"}
         </button>
       </form>
     </div>

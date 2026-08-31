@@ -313,10 +313,6 @@
   .nav a {
     font-size: 0.68rem;
   }
-
-  .phoneLink span {
-    display: none;
-  }
 }
 
 @media (max-width: 860px) {
@@ -336,14 +332,6 @@
   .headerCta {
     min-height: 38px;
     padding: 0 12px;
-  }
-
-  .headerCta span {
-    display: none;
-  }
-
-  .headerCta svg {
-    display: none;
   }
 }
 

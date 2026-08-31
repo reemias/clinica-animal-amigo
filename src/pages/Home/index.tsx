@@ -209,32 +209,6 @@ function Home() {
           </div>
         </section>
 
-        <section className={style.diferenciais} id="diferenciais">
-          <div className={style.container}>
-            <div className={style.sectionHeader}>
-              <span className={style.kicker}>Por que Animal Amigo</span>
-              <h2>Cuidado que vai além do esperado.</h2>
-              <p>
-                Uma experiência completa para você e seu pet, do primeiro
-                carinho ao acompanhamento de todos os dias.
-              </p>
-            </div>
-            <div className={style.diffGrid}>
-              {differentials.map(({ icon: Icon, title, text }, index) => (
-                <article
-                  className={`${style.diffCard} ${index === 0 ? style.diffCardFeatured : ""}`}
-                  key={title}
-                >
-                  <span className={style.cardNumber}>0{index + 1}</span>
-                  <Icon className={style.diffIcon} size={23} />
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className={style.agendamento} id="agendamento">
           <div className={style.container}>
             <div className={style.appointmentShell}>
@@ -267,6 +241,51 @@ function Home() {
               <Formulario />
             </div>
           </div>
+        </section>
+
+        <section className={style.diferenciais} id="diferenciais">
+          <div className={style.container}>
+            <div className={style.sectionHeader}>
+              <span className={style.kicker}>Por que Animal Amigo</span>
+              <h2>Cuidado que vai além do esperado.</h2>
+              <p>
+                Uma experiência completa para você e seu pet, do primeiro
+                carinho ao acompanhamento de todos os dias.
+              </p>
+            </div>
+            <div className={style.diffGrid}>
+              {differentials.map(({ icon: Icon, title, text }, index) => (
+                <article
+                  className={`${style.diffCard} ${index === 0 ? style.diffCardFeatured : ""}`}
+                  key={title}
+                >
+                  <span className={style.cardNumber}>0{index + 1}</span>
+                  <Icon className={style.diffIcon} size={23} />
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className={style.Posts_linkedin}>
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7160225800124874752"
+            height={822}
+            width={504}
+            style={{ border: 0 }}
+            allowFullScreen
+            title="Publicação incorporada"
+          />
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7159501038410973184"
+            height={822}
+            width={504}
+            style={{ border: 0 }}
+            allowFullScreen
+            title="Publicação incorporada"
+          />
         </section>
 
         {/* Seção Boutique com os cards */}
@@ -447,7 +466,10 @@ function Home() {
                   </li>
                 ))}
               </ul>
-              <a href="#contato" className={style.btnSecondary}>
+              <a
+                href="https://petshopbrasil.vercel.app"
+                className={style.btnSecondary}
+              >
                 Visite a boutique
                 <ArrowRight size={16} />
               </a>

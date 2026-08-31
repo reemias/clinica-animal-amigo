@@ -1,14 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import Header from "./component/Header";
 
-function Rout(){
-    return(
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />}/>
-            </Routes>
-        </BrowserRouter>
-    )
+function Rout() {
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default Rout
+export default Rout;

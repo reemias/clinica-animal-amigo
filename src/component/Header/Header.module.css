@@ -82,7 +82,7 @@
 .nav a {
   position: relative;
   padding: 8px 0;
-  font-size: 0.74rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.02em;
   white-space: nowrap;
@@ -124,7 +124,7 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: var(--primary-dark);
+  color: rgb(0, 0, 0);
   font-size: 0.73rem;
   font-weight: 800;
   white-space: nowrap;

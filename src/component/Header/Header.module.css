@@ -324,6 +324,9 @@
   .phoneLink {
     display: none;
   }
+  .logo small {
+    display: none;
+  }
 
   .hamburger {
     display: block;
@@ -351,6 +354,6 @@
   }
 
   .logo small {
-    font-size: 0.53rem;
+    display: none;
   }
 }

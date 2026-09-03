@@ -187,7 +187,7 @@ function Header() {
               rel="noopener noreferrer"
             >
               <img src={Whatsapp} alt="WhatsApp" />
-              <span>Agende pelo WhatsApp</span>
+              <span>WhatsApp</span>
               <ArrowUpRight size={15} />
             </a>
           </div>
